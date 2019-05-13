@@ -1,5 +1,5 @@
  
-将一个已有的项目上传到git仓库
+一.将一个已有的项目上传到git仓库
 
 git init  # 在项目目录下初始化
 git add .  # 添加文件
@@ -11,6 +11,19 @@ git config --global user.email "you@example.com"  # 邮箱
 
 git commit -m 'new vue'   # 将添加的文件,上传到本地仓库
 
+#添加秘钥
+ssh-keygen -t rsa -C “haiyan.xu.vip@gmail.com”
+
+然后到生成目录下  拷贝公钥内容到github上添加
+
 # 在github上创建的新仓库
 git remote add origin git@github.com:ywj790866977/vue.git     # 关联仓库
+
+
 git push -u origin master  # 将代码上传
+
+
+二. 更新代码
+git add  .   # 添加文件
+git commit -m '描述'  # 添加到本地仓库
+git push  # 添加到远程仓库
