@@ -1,0 +1,16 @@
+ 
+将一个已有的项目上传到git仓库
+
+git init  # 在项目目录下初始化
+git add .  # 添加文件
+git status  # 查看状态
+
+# 如果没有设置本机信息, 需要设置
+git config --global user.email "you@example.com"  # 邮箱
+  git config --global user.name "Your Name"  # 名字
+
+git commit -m 'new vue'   # 将添加的文件,上传到本地仓库
+
+# 在github上创建的新仓库
+git remote add origin git@github.com:ywj790866977/vue.git     # 关联仓库
+git push -u origin master  # 将代码上传
