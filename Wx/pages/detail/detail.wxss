@@ -1,0 +1,47 @@
+/* pages/detail/detail.wxss */
+/* .slider image 默认值: 320*240 */
+/* .slider swiper 默认值: 375*195 */
+.slider, .slider image, .slider swiper{ 
+    width:100%;
+    height:390rpx;
+}
+.shop-title{
+    font-size: 18pxl;
+}
+.priceInfo .oldprice{
+    color: #ccc;
+    text-decoration: line-through;
+    margin-right: 15rpx;
+}
+.priceInfo .newprice{
+    color: red;
+    font-size: 18px;
+}
+.tui-number-group{
+    display: table;
+    table-layout: fixed;
+    width:300rpx;
+    text-align: center;
+    border-radius: 6rpx;
+    overflow: hidden;
+    border:1rpx solid #bbb;
+}
+.tui-number-cell{
+    display: table-cell;
+    line-height: 1.7;
+    border-radius: 0;
+}
+button::after{
+    border-bottom: none;
+    border-top:none;
+    border-radius: 0;
+}
+
+.addCart{
+    background-color: #fc0;
+    font-size: 14px;
+}
+.addOrder{
+    background-color: #fc0;
+    font-size: 14px;
+}

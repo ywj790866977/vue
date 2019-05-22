@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    请输入:<input type="text" id="num1">
+    <button id="btn1">计算</button>
+    <div id="msg">
+        正在计算中
+    </div>
+    <script>
+    var num1 = document.getElementById("num1");
+    var btn1 = document.getElementById("btn1");
+    var msg = document.getElementById("msg");
+    btn1.onclick = function(){
+        var n = num1.value;
+        var w = new Worker('1.js');
+        w.postMessage(n);
+        w.onmessage = function(e){
+            var res = e.data;
+            msg.innerHTML = res
+        }
+
+    }
+    </script>
+</body>
+</html>

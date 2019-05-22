@@ -1,0 +1,52 @@
+/* .log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+} */
+
+.slider, .slider image, .slider swiper{
+  width:100%;
+  height: 390rpx;
+}
+.index-nav{
+  display: flex;
+  flex-wrap: wrap;
+}
+.index-nav .nav-item{
+  width:33.3333%;
+  height:200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing:border-box;
+  /* border-right:1rpx solid #ccc; */
+  font-size:14px;
+  border-bottom: 1rpx solid #ccc;
+  position: relative;
+}
+.index-nav .nav-item:nth-child(3n){
+  border-right: 0 none;
+}
+.index-nav .nav-item image{
+  width:80rpx;
+  height:80rpx;
+}
+
+/* 入口样式 */
+.index-enter{
+  display: flex;
+  margin-top:20rpx;
+}
+.index-enter .enter-item{
+  width:50%;
+  justify-content: center;
+  display: flex;
+}
+.index-enter image{
+  width:320rpx;
+  height:178rpx;
+}

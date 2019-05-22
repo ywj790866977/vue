@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    当前薪水:
+    <meter id="m1" min="0" max="100000" low="20000" high="90000" optimum="99999" value="0" ></meter>
+    <script>
+    var m1 = document.getElementById("m1")
+    var t = null;
+    var v = m1.value;
+    t= setInterval(()=>{
+        v += 10000;
+        m1.value = v;
+        if(v >= 100000) clearInterval(t)
+    },500)
+    </script>
+</body>
+</html>

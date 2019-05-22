@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <progress></progress>
+    <progress value="0.1" id="pro1"></progress>
+    <script>
+        var progress = document.getElementById("pro1")
+        var t = null
+        var v =  0.1
+        t = setInterval(() => {
+            v += 0.1;
+            progress.value = v;
+            if(v>0.9) clearInterval(t)
+        }, 200);
+    </script>
+</body>
+</html>

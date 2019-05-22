@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+         text-align: center;
+    }
+    canvas{
+        background-color: #ddd;
+    }
+    </style>
+</head>
+<body>
+    <h3>h5 新特性 绘图</h3>
+    <canvas width="500" height="400" id="c3">
+        您的浏览器版本太低,请升级
+    </canvas>
+
+    <script>
+    //获取画布
+    var c3 = document.getElementById("c3")
+    //画笔
+    var ctx = c3.getContext("2d")
+    //绘制矩形
+    ctx.strokeRect(400,0,100,80)
+    </script>
+</body>
+</html> 

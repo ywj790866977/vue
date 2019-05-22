@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<!-- <view >{{message}}</view>
+<view wx:if="{{app == 'home'}}">
+    home
+</view>
+<view wx:for="{{rows}}" wx:key="id">
+    {{item.id}}:{{item.name}}:{{index}}
+</view>
+<view wx:for="{{products}}" wx:key="id">
+    <image  src="" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+</view>
+   -->
+   <navigator class="" target="" url="/pages/news/news?id=9" >
+       跳转新闻组件
+   </navigator>

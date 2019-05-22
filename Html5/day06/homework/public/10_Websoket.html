@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>websocket 客户端</h3>
+    <button id="btn1">建立连接</button>
+    <button id="btn2">发送消息</button>
+    <button id="btn3">断开连接</button>
+    <script>
+        var ws = null;
+        var bt1 = document.getElementById("btn1");
+        var bt2 = document.getElementById("btn2");
+        var bt3 = document.getElementById("btn3");
+        //建立连接
+        btn1.onclick=function(){
+            ws = new WebSocket("ws://127.0.0.1:9001");
+            onmessage = function(e){
+                var str = e.data;
+                console.log("消息:"+str)
+            }
+        }
+        //发送数据
+        btn2.onclick=function(){
+            ws.send("fuck you - " + new Date().getTime())
+        }
+        //关闭
+        btn3.onclick=function(){
+            ws.close();
+        }
+    </script>
+</body>
+</html>

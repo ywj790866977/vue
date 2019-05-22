@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background:#fff;
+            text-align: center;
+        }
+        .container{
+            position: relative;
+        }
+        .ctrl{
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-top: -60px;
+            margin-left: -60px
+        }
+        .ctrl img{
+            width:120px;
+            height: 120px;
+        }
+        .add{
+            width: 400px;
+            height: 300px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-left:-200px;
+            margin-top: -150px;
+        }
+    </style>
+</head>
+<body>
+    <h3>自定视频控件</h3>
+    <div class="container">
+        <!-- 视频 -->
+        <video src="res/x.mp4" id="v3"></video>
+        <!-- 广告 -->
+        <img src="res/add.png" alt="11" class="add">
+        <!-- 图标 -->
+        <a href="#" class="ctrl">
+            <img src="res/play.png" alt="111">
+        </a>
+    </div>
+    <script>
+        // 显示/隐藏
+        // var d1 = document.getElementsByClassName("container")[0]
+        var container = document.querySelector(".container")
+        var ctrl = document.querySelector(".ctrl")
+        var img = document.querySelector(".ctrl img")
+        var v3 = document.getElementById("v3")
+        container.onmouseenter = function(){
+            ctrl.style.display="block";
+        }
+        container.onmouseleave = function(){
+            ctrl.style.display="none"
+        }
+
+        ctrl.onclick=function(e){
+            e.preventDefault();
+            if(v3.paused){
+                v3.play();
+                img.src = 'res/pause.png'
+            }
+            else{
+                v3.pause();
+                img.src = 'res/play.png'
+            }
+        }
+        //广告
+        var add = document.querySelector(".add")
+        v3.onplay=function(){
+            add.style.display = 'none';
+        }
+        v3.onpause=function(){
+            add.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #c3{
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h3>H5 新特性 绘图</h3>
+    <canvas width="500" height="400" id="c3">
+        浏览器版本太低!
+    </canvas>
+
+    <script>
+        var c3 = document.getElementById("c3");
+        var ctx = c3.getContext("2d");
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = "red";
+        ctx.strokeRect(0,0,100,80);
+
+        ctx.strokeStyle="blue";
+        ctx.strokeRect(400,0,100,80);
+        // ctx.clearRect(0,0,101,81);
+
+        ctx.strokeStyle="yellow";
+        ctx.strokeRect(0,320,100,80);
+
+        ctx.strokeStyle="pink";
+        ctx.strokeRect(400,320,100,80);
+
+        ctx.strokeStyle="pink";
+        ctx.strokeRect(200,160,100,80);
+        
+        // var t = null
+        // t = setInterval(()=>{
+
+        // })
+    </script>
+</body>
+</html>

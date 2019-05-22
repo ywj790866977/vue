@@ -1,0 +1,45 @@
+/* 网页背景 */
+page{
+    background-color:#f1f1f1;
+}
+/* 卡片 */
+.card{
+    background-color: #fff;
+    border:1px solid #ddd;
+    border-radius: 10rpx;
+    margin: 60rpx 20rpx;
+    padding:30rpx;
+    display: flex;
+    flex-direction: column;
+}
+/* 标题 */
+.card-title{
+    font-size: 20px;
+    margin-bottom: 20rpx;
+}
+/* 时间 */
+.card-date{
+    font-size:14px;
+    color:#cccccc;
+    border-bottom:1rpx solid #cccccc;
+    padding-bottom:20rpx;
+    margin-bottom:20rpx;
+}
+/* 图片 */
+.card-img{
+    height:300rpx;
+    width:100%;
+}
+/* desc */
+.card-desc{
+    border-bottom:1rpx solid #cccccc;
+    margin: 20rpx 0;
+    padding-bottom: 20rpx;
+    color:#333;
+    font-size: 16px
+}
+/* 查看详情 */
+.card-read{
+    font-size:14px;
+    color:#666;
+}

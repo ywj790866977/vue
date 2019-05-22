@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            #c3{
+                background-color: #ddd;
+            }
+    </style>
+</head>
+<body>
+        <h3>H5 新特性 动绘图</h3>
+    <canvas width="500" height="400" id="c3">
+        浏览器版本太低!
+    </canvas>
+    <script>
+        var c3 = document.getElementById("c3");
+        var ctx = c3.getContext("2d");
+
+        var w = 50;
+        
+        ctx.fillStyle = "red"
+        ctx.fillRect(85,350,50,50)
+    </script>
+</body>
+</html>

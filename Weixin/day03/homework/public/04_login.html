@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>登录</h3>
+    <form >
+        用户名: <input type="text" id="uname">
+        密码: <input type="password" id="upwd">
+        <input type="button" value="登录" id="btn">
+    </form>
+    <script>
+        var btn=document.getElementById("btn")
+        btn.onclick = function(){
+            var uname = document.getElementById("uname");
+            sessionStorage.setItem("uname",uname.value);
+            alert("3秒跳转到首页");
+            setTimeout(()=>{
+                location.href = "03_index.html";
+            })
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>H5新特性 音频</h3>
+    <audio src="res/bg.mp3" id="a1"></audio>
+    <input type="checkbox" id="cb">播放
+    <script>
+        var cb = document.getElementById("cb")
+        var a1 = document.getElementById("a1")
+        cb.onchange=function(){
+            if(this.checked){
+                a1.volume = 0;
+                var t = null;
+                a1.play();
+                t = setInterval(()=>{
+                    a1.volume += 0.1
+                    if(a1.volume > 0.9) clearInterval(t)
+                },500)
+            }else{
+                a1.pause();
+            }
+        }
+    </script>
+</body>
+</html>

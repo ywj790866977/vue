@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        text-align: center;
+    }
+    canvas{
+        background-color: #ddd;
+    }
+    </style>
+</head>
+<body>
+    <h3>H5新特性 </h3>
+    <canvas width="500" height="400" id="c3">
+        您的浏览器版本太低!
+    </canvas>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        var c3 = document.getElementById("c3");
+        var ctx = c3.getContext("2d");
+        $.ajax({
+            url:"http://localhost:3000/list",
+            type:"GET",
+            success:function(result){
+                for (var i=0;i<result.length;i++){
+                    var item = result[i];
+                    var w = 50; // 宽度
+                    var h = item.value;  //高
+                    var x = i * 100 + 50;
+                    var y = 400 - h;
+                    ctx.fillStyle = fc();;
+                    ctx.fillRect(x,y,w,h)
+                    //文本
+                    var name = item.label;
+                    var textY = 400 - 200;
+                    var textX = x;
+                    ctx.fillStyle= "#000";
+                    ctx.fillText(name,textX,textY)
+                }
+            }
+        })
+        function fc(){
+            var r = Math.floor(Math.random()*256);
+            var g = Math.floor(Math.random()*256);
+            var b = Math.floor(Math.random()*256);
+            return `rgb(${r},${g},${b})`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Html5 新特性 video</h3>
+    <video src="./res/x.mp4" id="v3" controls loop  poster="res/p3.png"></video>
+    <hr>
+    <button id="play1">播放</button>
+    <button id="pause1">暂停</button>
+    <script>
+    var v3 = document.getElementById("v3")
+    v3.volume = 0.3
+    v3.playbackRate=1.5
+    var play = document.getElementById("play1")
+    var pause = document.getElementById("pause1")
+    play.onclick = function(){
+        console.log(1)
+        v3.play();
+    }
+    pause.onclick = function(){
+        console.log(2)
+        v3.pause();
+    }
+    </script>
+</body>
+</html>

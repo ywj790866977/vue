@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            body{
+                text-align: center;
+            }
+            canvas{
+                background-color:#ddd;
+            }
+    </style>
+</head>
+<body>
+    <h5>h5  path</h5>
+    <canvas width="500" height="400" id="c3"></canvas>
+    <script>
+        var c3 = document.getElementById("c3");
+        var ctx = c3.getContext("2d");
+        //开始一条新路径
+        ctx.beginPath();
+        ctx.moveTo(250,200);
+        ctx.lineTo(300,200);  //直线
+        ctx.lineTo(300,300);
+        ctx.closePath();  //闭合
+        ctx.stroke();  //描边
+
+        //开始新
+        ctx.beginPath();
+        ctx.arc(100,100,25,0,2*Math.PI);
+        ctx.stroke();
+
+        // 半圆
+        ctx.beginPath();
+        ctx.arc(200,250,25,-90*Math.PI/180,90*Math.PI/180);
+        ctx.stroke();
+    </script>
+</body>
+</html>
